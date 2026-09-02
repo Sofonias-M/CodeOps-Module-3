@@ -1,16 +1,61 @@
-# React + Vite
+# Addis Eats
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based restaurant menu application showcasing Ethiopian cuisine.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Responsive Menu Display** - Browse menu items with automatic layout adjustment
+- **Dynamic Pricing** - View original prices and calculated VAT (15%)
+- **Category Organization** - Menu items categorized by type
+- **Hover Effects** - Interactive card animations for better UX
 
-## React Compiler
+## Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+2. **Start development server:**
+   ```bash
+   npm run dev
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Open browser:** Navigate to `http://localhost:5173`
+
+## Project Structure
+
+```
+src/
+├── App.jsx          # Main app component
+├── Header.jsx       # Header navigation component
+├── Footer.jsx       # Footer component
+├── MenuItem.jsx     # Dish & menu item components
+├── Menu.jsx         # Menu data & exports
+├── main.jsx         # Entry point
+├── App.css          # App-specific styles
+└── index.css        # Global styles
+```
+
+## Components
+
+- **Header** - Navigation and branding
+- **Footer** - Footer information and links
+- **Menu** - Menu data structure
+- **MenuItem** - Individual dish display with pricing
+
+## Responsive Design
+
+- **Desktop (1024px+):** 2 items per row
+- **Tablet (768px - 1024px):** 2 items per row  
+- **Mobile (< 768px):** 1 item per row
+
+## Tech Stack
+
+- React
+- CSS3 (Flexbox)
+- Vite
+
+## License
+
+Educational Project - IBT SQ4 Module 3

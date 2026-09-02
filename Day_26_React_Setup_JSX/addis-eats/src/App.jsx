@@ -1,23 +1,28 @@
-import './App.css'
-import Menu from './Dish.jsx'
+import './App.css';
+import Menu from './MenuItem.jsx';
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
 
 {/* <h1>Welcome to Addis Eats.</h1> */}
+// const restaurantName = "Addis Café";
 
-function Header() {
-  return <h1>Addis Eats</h1>;
-}
+
+// function withVAT(){
+//   Menu.forEach(element => {
+//     element.price = element.price * 1.15;
+//   });
+// } 
+// console.log({Header})
 
 function App () {
   return (
     <div>
-      {/* <h1>Addis Eats</h1> */}
-      {/* <Dish name="Firfir" price="220" />
-      <Dish name="Pasta" price="240" /> */}
-
+      {/* <h1>Addis Eats</h1>
+      <p>Order great food across Addis.</p>
+      <h1>{restaurantName}</h1>*/}
       <Header />
-      <p>Order great food across Addis.</p>      
       <Menu />
-      
+      <Footer />
     </div>
   );
 }

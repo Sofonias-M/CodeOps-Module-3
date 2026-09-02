@@ -11,8 +11,8 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: Georgia, 'Times New Roman', Times, serif;
+  --heading: Georgia, 'Times New Roman', Times, serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -45,9 +45,6 @@
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
 }
 
 body {
@@ -66,8 +63,7 @@ body {
   box-sizing: border-box;
 }
 
-h1,
-h2 {
+h1, h2 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
@@ -82,6 +78,7 @@ h1 {
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
@@ -91,21 +88,97 @@ h2 {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+.dishContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+  padding: 21px;
+  justify-content: center;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.dish {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex: 1 1 calc(50% - 21px);      /* 2 items per row on desktop */
+  min-width: 250px;
+  max-width: 400px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  border: 1px solid #eaeaea;
+}
+
+@media (max-width: 1024px) {
+  .dish {
+    flex: 1 1 calc(50% - 21px);    /* 2 items per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .dish {
+    flex: 1 1 100%;                /* 1 item per row on mobile */
+  }
+}
+
+.dish:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(212, 210, 202, 0.2);
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.priceOriginal {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #d35400; /* Warm food-centric color */
+}
+
+.itemCategory {
+  margin: 0 0 12px 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #95a5a6;
+  font-weight: 600;
+}
+
+.itemDescription {
+  margin: 0 0 16px 0;
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  line-height: 1.4;
+}
+
+.withVAT {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.withVAT {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #27ae60; /* Subtle green for final total */
+}
+
+
+.footer {
+  align-self: baseline;
 }
