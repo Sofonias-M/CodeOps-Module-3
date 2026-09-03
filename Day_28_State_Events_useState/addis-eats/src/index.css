@@ -111,6 +111,7 @@ p {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   padding: 20px;
   border: 1px solid #eaeaea;
+  position: relative;
 }
 
 @media (max-width: 1024px) {
@@ -155,7 +156,7 @@ h3 {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #95a5a6;
+  color: #6232e8;
   font-weight: 600;
 }
 
@@ -164,6 +165,25 @@ h3 {
   font-size: 0.95rem;
   color: #7f8c8d;
   line-height: 1.4;
+}
+
+.spicyItem {
+  /* color: #d31900; */
+  position: absolute;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  padding: 4px 12px;
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 50px;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(255, 75, 43, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  top: 7px;
+  right: 7px;
+  white-space: nowrap;
 }
 
 .withVAT {
@@ -178,7 +198,7 @@ h3 {
   color: #27ae60; /* Subtle green for final total */
 }
 
-.orderItems {
+.orderItems, .categoryFilterList {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -193,19 +213,19 @@ h3 {
 }
 
 #orderButtonWithAlert {
-  font-size: 16px;
-  gap: 12px;
-  padding: 12px;
+  /* font-size: 16px; */
+  gap: 21px;
+  padding: 7px 12px;
   justify-content: center;
   font-family: var(--heading);
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  padding: 20px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border-radius: 41px;
+  box-shadow: 0 0 10px rgba(255, 75, 43, 0.5);
   border: 1px solid #eaeaea;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: white;
+  text-transform: uppercase;
 }
 
 #orderButtonWithAlert:hover{
@@ -213,6 +233,60 @@ h3 {
   box-shadow: 0 10px 20px rgba(212, 210, 202, 0.2);
   color: gold;
 }
+
+/* The container holding both elements */
+.input-group {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.err {
+  display: flex;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #e8edf1;
+  background: #000;
+}
+
+/* The input field */
+.input-field {
+  /* flex: 1; Automatically stretches to fill available space */
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-right: none; /* Removes the border between the input and button */
+  border-radius: 4px 0 0 4px; /* Rounds only the left corners */
+  outline: none;
+  font-family: var(--heading);
+}
+
+/* The button */
+.submit-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+  border-radius: 0 4px 4px 0; /* Rounds only the right corners */
+  cursor: pointer; /* Changes the mouse icon to a pointer hand */
+  transition: background-color 0.2s;
+  justify-content: center;
+  font-family: var(--heading);
+}
+
+/* Simple hover effect for the button */
+.submit-btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.submit-btn:disabled {
+  background-color: gray;
+  pointer-events: none; /* Stops hover and click */
+  opacity: 0.6;
+}
+
 
 .footer {
   align-items: center;
