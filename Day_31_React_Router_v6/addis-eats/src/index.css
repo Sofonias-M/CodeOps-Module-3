@@ -93,7 +93,7 @@ p {
   margin: 0;
 }
 
-.dishContainer {
+.gameContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 21px;
@@ -101,7 +101,7 @@ p {
   justify-content: center;
 }
 
-.dish {
+.game {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   flex: 1 1 calc(50% - 21px);      /* 2 items per row on desktop */
   min-width: 250px;
@@ -115,18 +115,18 @@ p {
 }
 
 @media (max-width: 1024px) {
-  .dish {
+  .game {
     flex: 1 1 calc(50% - 21px);    /* 2 items per row on tablets */
   }
 }
 
 @media (max-width: 768px) {
-  .dish {
+  .game {
     flex: 1 1 100%;                /* 1 item per row on mobile */
   }
 }
 
-.dish:hover{
+.game:hover{
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(212, 210, 202, 0.2);
 }

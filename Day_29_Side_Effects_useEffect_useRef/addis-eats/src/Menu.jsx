@@ -1,17 +1,31 @@
 import dishes from './data.jsx';
 import { useState } from 'react';
-// import OrderForm from './OrderForm.jsx';
+import OrderForm from './OrderForm.jsx';
 
 
-function Dish({ name, price }) {
+function Dish({ name, price, category, spicy }) {
     return (
         <div className="dish">
-        <h3 >{name}</h3>
-        <p className='priceOriginal'>{price} ETB</p>
+            <h3 >{name}</h3>
+            <p className='priceOriginal'>{price} ETB</p>
+            <p className='itemCategory'>{category}</p>
+            {spicy && <span className='spicyItem'>🔥 Spicy</span>}
         </div>
     );
 }
 
+
+function OrderButton() {
+    function handleClick() {
+        alert("Doro Wat added to your order");
+    }
+
+    return (
+        <button id="orderButtonWithAlert" onClick={handleClick}>
+            Order
+        </button>
+    );
+}
 
 export default function Menu() {
     const [category, setCategory] = useState("All");
@@ -23,19 +37,13 @@ export default function Menu() {
         setTotal(total + price, 0);
     }
 
-    function OrderButton() {
-        function handleClick() {
-            alert("Doro Wat added to your order");
-        }
-        return <button id='orderButtonWithAlert' onClick={handleClick}>Order</button>;
-    }
-
-
     return (
         <div>
-            {cats.map(c => (
-            <button key={c} onClick={() => setCategory(c)}>{c}</button>
-            ))}
+            <div className='categoryFilterList'>
+                {cats.map(c => (
+                <button key={c} onClick={() => setCategory(c)}>{c}</button>
+                ))}
+            </div>
 
             <div className='dishContainer'>
                 {shown.length === 0 ? <p>No dishes in this category yet.</p> 
@@ -50,7 +58,10 @@ export default function Menu() {
             
             {<h4 id='orderTotal'>Ordered Total: {total}</h4>}
 
-            {/* <OrderForm /> */}
+            {/* <div className='input-group'>
+                <OrderForm />
+            </div> */}
+            <OrderForm />
 
         </div>
     );
