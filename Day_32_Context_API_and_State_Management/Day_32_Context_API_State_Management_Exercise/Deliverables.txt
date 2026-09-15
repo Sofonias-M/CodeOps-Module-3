@@ -1,0 +1,17 @@
+Your routed application with the cart in a Zustand store: narrow selectors
+in every consumer, actions on the store, persistence across a refresh, and
+a useAuth hook guarding the context that remains — committed to
+GitHub.
+
+Steps
+• Wrap your existing CartContext in a useCart hook that throws without a
+provider.
+• Split the auth and theme values into their own providers, separate from the
+cart.
+• Install zustand and rebuild the cart as a store with items, addItem, remove
+and clear.
+• Replace every useCart call with a narrow selector, one value at a time.
+• Add the persist middleware so the order survives a page refresh.
+
+• Open the devtools, add three dishes, and check which components re-
+render.
