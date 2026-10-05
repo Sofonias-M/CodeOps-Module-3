@@ -94,10 +94,10 @@ export default function Home() {
         <div className="visit-details">
           <p>Join us for a long lunch, a cosy dinner, or order your favourites to share at home.</p>
           <div className="visit-actions">
-            <a className="button button-dark" href="tel:+251911000000">Call to reserve <span aria-hidden="true">↗</span></a>
+            <a className="button button-dark" href="tel:+25192**08427">Call to reserve <span aria-hidden="true">↗</span></a>
             <Link className="text-link" href="/menu">Order from our menu <span aria-hidden="true">→</span></Link>
           </div>
-          <small>Open daily · 11:00 – 22:00 · Addis Ababa</small>
+          <small>Open daily · 10:00 – 23:00 · Addis Ababa</small>
         </div>
       </section>
     </main>

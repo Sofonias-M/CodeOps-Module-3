@@ -34,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <div className="shell footer-inner">
               <span>Addis Eats <span aria-hidden="true">✳</span></span>
               <span>Good food. Good company. Always.</span>
-              <a href="mailto:hello@addiseats.example">Say hello ↗</a>
+              <a href="mailto:sofimekonnen@gmail.com">Say hello ↗</a>
             </div>
           </footer>
         </CartProvider>
