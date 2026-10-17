@@ -20,12 +20,12 @@ export const products: Product[] = [
     available: true,
   },
   {
-    id: 'coffee-ceremony-set',
-    name: 'Ethiopian Coffee Ceremony Set',
+    id: 'coffee-ceremony-cups',
+    name: 'Ethiopian Coffee Ceremony Cups',
     price: 85,
     category: 'Pottery',
-    image: '/products/Traditional-Ethiopian-Coffee-Ceremony-Set-12pcs-Habesha.jpg_350x350q80.avif',
-    description: 'A classic Ethiopian coffee ceremony set inspired by the ritual warmth of buna, featuring handcrafted pottery pieces and ceremonial detail.',
+    image: '/products/Ethiopian_Coffee_Ceremony_Cups_1.webp',
+    description: 'A classic Ethiopian coffee ceremony cups inspired by the ritual warmth of buna, featuring handcrafted pottery pieces and ceremonial detail.',
     available: true,
   },
   {
