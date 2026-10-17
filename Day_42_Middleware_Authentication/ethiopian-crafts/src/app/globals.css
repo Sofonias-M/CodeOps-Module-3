@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --bg-base: #f6efe6;
+  --bg-surface: #fffdf9;
+  --bg-card: #fffaf3;
+  --accent-primary: #a34324;
+  --accent-success: #286047;
+  --accent-warning: #80500c;
+  --text-normal: #241914;
+  --text-muted: #6d5d52;
+  --border-glow: #e7d8c8;
+  --navy: #211713;
+  background: var(--bg-base);
+  color: var(--text-normal);
+}
+
+@theme inline {
+  --color-stone-50: var(--bg-card);
+  --color-stone-100: var(--bg-base);
+  --color-stone-200: var(--border-glow);
+  --color-stone-300: #d8c6b4;
+  --color-stone-600: var(--text-muted);
+  --color-stone-700: #514238;
+  --color-stone-800: #392a22;
+  --color-stone-900: var(--text-normal);
+  --color-amber-100: #f8e8c5;
+  --color-amber-200: #edca87;
+  --color-amber-400: #d69a3a;
+  --color-amber-700: #85371b;
+  --color-amber-800: var(--accent-primary);
+  --color-amber-900: #542719;
+  --color-amber-950: var(--navy);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top, rgb(255 252 246 / 85%), transparent 58%),
+    var(--bg-base);
+}
+
+::selection {
+  background: #edca87;
+  color: var(--navy);
+}
+
+:focus-visible {
+  outline-color: var(--accent-primary);
+}
